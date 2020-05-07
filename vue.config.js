@@ -7,9 +7,17 @@
  * @FilePath: /zhimutong_company_backstage/vue.config.js
  */
 
+const path = require("path");
+// eslint-disable-next-line no-unused-vars
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
+
   productionSourceMap: false,
-  publicPath: "./", //资源路径为相对路径 可以本地打开index.html
-  outputDir: 'docs'
+
+  outputDir: "docs",
+  assetsDir: "./"
 };
