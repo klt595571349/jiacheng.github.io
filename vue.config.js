@@ -14,10 +14,9 @@ function resolve(dir) {
 }
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
-
+  // publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
+  publicPath: "./",
   productionSourceMap: false,
-
-  outputDir: "docs",
-  assetsDir: "./"
+  outputDir: "docs"
+  // assetsDir: "./"
 };
